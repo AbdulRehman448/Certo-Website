@@ -8,19 +8,19 @@
    ============================================================ */
 :root {
   /* Brand Colors */
-  --color-gold:        #FFB800; /* Updated to match screenshot */
-  --color-gold-dark:   #e5a600;
-  --color-blue:        #4C3EE8; /* The blue in hero */
-  --color-blue-dark:   #3A2EB0;
-  --color-dark:        #060B27; /* Updated to darker blue/black */
+  --color-gold:        #FFC857; /* Updated to match Figma */
+  --color-gold-dark:   #E5B44E;
+  --color-blue:        #4353FF; /* Updated to match Figma */
+  --color-blue-dark:   #3B49E6;
+  --color-dark:        #02033B; /* Updated to match Figma */
   --color-dark-alt:    #16213E;
   --color-body-bg:     #FFFFFF;
   --color-section-bg:  #F7F8FC;
-  --color-features-bg: #EEF3F9; /* Light blue background */
-  --color-cta-bg:      #C8DDF9; /* Light blue CTA background */
+  --color-features-bg: #EEF3F9; 
+  --color-cta-bg:      #C8DDF9; 
 
   /* Text */
-  --color-text-primary:   #060B27;
+  --color-text-primary:   #02033B;
   --color-text-secondary: #555B6E;
   --color-text-light:     #888EA8;
   --color-text-white:     #FFFFFF;
