@@ -310,6 +310,14 @@ a { text-decoration: none; }
   line-height: 1.1;
 }
 
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: var(--color-text-secondary);
+  max-width: 540px;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
 /* ============================================================
    6. REVIEWS & FEATURED IN (GOLD WRAPPER)
    ============================================================ */
