@@ -8,7 +8,7 @@
    ============================================================ */
 :root {
   /* Brand Colors */
-  --color-gold:        #FFC857; /* Updated to match Figma */
+  --color-gold:        #FBBA1A; /* Updated to match reference image */
   --color-gold-dark:   #E5B44E;
   --color-blue:        #4353FF; /* Updated to match Figma */
   --color-blue-dark:   #3B49E6;
@@ -304,10 +304,10 @@ a { text-decoration: none; }
 /* PHONE IMAGE – overlaps left edge of the blue panel */
 .hero-phone-ui {
   position: absolute;
-  height: 55%;
-  width: 56;
-  left: 15%;
-  top: 40%;
+  height: 80%;
+  width: auto;
+  left: -40px;
+  top: 50%;
   transform: translateY(-50%);
   z-index: 3;
   border-radius: 32px;
@@ -406,7 +406,7 @@ a { text-decoration: none; }
   flex-shrink: 0;
 }
 
-.stars { color: var(--color-gold); font-size: 1rem; margin-bottom: 1rem; }
+.stars { color: var(--color-dark); font-size: 1rem; margin-bottom: 1rem; }
 
 .review-text {
   color: var(--color-dark);
@@ -423,7 +423,9 @@ a { text-decoration: none; }
 }
 
 .featured-section {
-  padding: 40px 0 80px 0;
+  padding: 40px 0 60px 0;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  margin-top: 40px;
 }
 
 .featured-logos-bar {
