@@ -301,7 +301,7 @@ a { text-decoration: none; }
 .hero-phone-ui {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 50%;
   transform: translate(-75%, -50%);
   width: 320px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
