@@ -178,7 +178,7 @@ a { text-decoration: none; }
    4. NAVBAR
    ============================================================ */
 .certo-navbar {
-  background-color: var(--color-body-bg);
+  background-color: #F4F7FC;
   padding: 18px 0;
 }
 
@@ -214,10 +214,10 @@ a { text-decoration: none; }
 
 .certo-navbar .nav-link {
   font-family: var(--font-heading);
-  font-weight: 600;
+  font-weight: 800;
   color: var(--color-text-primary);
-  font-size: 0.95rem;
-  padding: 0.3rem 0.8rem;
+  font-size: 1rem;
+  padding: 0.3rem 1.2rem;
   transition: color 0.18s;
 }
 .certo-navbar .nav-link:hover { color: var(--color-blue); }
@@ -227,8 +227,8 @@ a { text-decoration: none; }
   color: white;
   border-radius: var(--radius-pill);
   font-family: var(--font-heading);
-  font-weight: 600;
-  padding: 0.6rem 1.6rem;
+  font-weight: 800;
+  padding: 0.7rem 2rem;
 }
 .btn-sign-in:hover {
   background-color: var(--color-blue-dark);
