@@ -75,8 +75,8 @@ a { text-decoration: none; }
    ============================================================ */
 .btn {
   font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 0.9rem;
+  font-weight: 800;
+  font-size: 1rem;
   border-radius: var(--radius-pill);
   padding: 0.75rem 1.75rem;
   transition: all 0.22s ease;
@@ -278,20 +278,19 @@ a { text-decoration: none; }
   position: absolute;
   top: 0;
   right: 0;
-  width: 45%;
+  width: 47%;
   height: 100%;
   background-color: var(--color-blue);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   z-index: 1;
 }
 
 /* INNER GOLD BOX */
 .hero-gold-box {
-  position: relative;
-  width: 85%;
-  height: 85%;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 0;
+  bottom: 0;
   background-color: var(--color-gold);
   overflow: hidden;
 }
@@ -308,12 +307,12 @@ a { text-decoration: none; }
 /* PHONE IMAGE */
 .hero-phone-ui {
   position: absolute;
-  width: 300px;
-  right: 12%;
+  width: 360px;
+  left: -30px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 3;
-  border-radius: 28px;
+  border-radius: 36px;
   box-shadow: 0 25px 50px rgba(0,0,0,0.2);
 }
 
@@ -326,6 +325,7 @@ a { text-decoration: none; }
 }
 
 .hero-title {
+  font-family: var(--font-heading);
   font-size: clamp(2.8rem, 5vw, 4.2rem);
   font-weight: 800;
   color: var(--color-text-primary);
@@ -336,7 +336,7 @@ a { text-decoration: none; }
 
 .hero-subtitle {
   font-size: 1.15rem;
-  color: var(--color-text-secondary);
+  color: var(--color-text-primary);
   max-width: 520px;
   margin-bottom: 2.5rem;
   line-height: 1.7;
