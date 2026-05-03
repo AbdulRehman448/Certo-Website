@@ -406,7 +406,7 @@ a { text-decoration: none; }
   flex-shrink: 0;
 }
 
-.stars { color: var(--color-dark); font-size: 1rem; margin-bottom: 1rem; }
+.stars { color: var(--color-yellow); font-size: 1rem; margin-bottom: 1rem; }
 
 .review-text {
   color: var(--color-dark);
