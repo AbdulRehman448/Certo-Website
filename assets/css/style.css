@@ -90,6 +90,19 @@ a { text-decoration: none; }
   font-size: 0.85rem;
 }
 
+.brand-text {
+  /* Use 800 or 900 for that thick, heavy look in the image */
+  font-weight: 800; 
+  font-size: 1.8rem;
+  color: #0d084d; /* Dark navy color from image_5d249e.png */
+  
+  /* Tighten letter spacing slightly to match the compact brand look */
+  letter-spacing: -0.03em; 
+  
+  /* Ensure it aligns perfectly with the shield icon */
+  line-height: 1;
+}
+
 /* Primary – Gold */
 .btn-certo-primary {
   background-color: var(--color-gold);
