@@ -425,7 +425,6 @@ a { text-decoration: none; }
 
 .featured-section {
   padding: 40px 0 60px 0;
-  border-top: 1px solid rgba(0,0,0,0.08);
   margin-top: 40px;
 }
 
@@ -433,11 +432,17 @@ a { text-decoration: none; }
   text-align: center;
 }
 
+.featured-label {
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--color-dark);
+  font-family: var(--font-heading);
+  white-space: nowrap;
+}
+
 .featured-tags-img {
-  width: 100%;
-  max-width: 900px;
+  max-width: 750px;
   height: auto;
-  display: inline-block;
 }
 
 /* ============================================================
