@@ -760,18 +760,11 @@ a { text-decoration: none; }
 
 .footer-nav-list a {
   color: var(--color-gold);
-  font-size: 1.15rem;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
   font-weight: 800;
   text-decoration: none;
-  display: flex;
-  align-items: center;
-}
-
-.footer-nav-list .dash {
-  width: 20px;
-  height: 2px;
-  background-color: var(--color-gold);
-  margin-right: 15px;
+  display: block;
 }
 
 /* Right Col: Newsletter */
