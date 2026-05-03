@@ -288,7 +288,7 @@ a { text-decoration: none; }
   left: 30px;     /* blue visible on LEFT */
   right: 0;       /* flush to right edge */
   bottom: 0;      /* flush to bottom edge */
-  background-color: var(--color-gold);
+  background-color: var(--color-lightgold);
   overflow: hidden;
 }
 
