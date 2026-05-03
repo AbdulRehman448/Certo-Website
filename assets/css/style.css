@@ -12,7 +12,7 @@
   --color-gold-dark:   #E5B44E;
   --color-blue:        #4353FF; /* Updated to match Figma */
   --color-blue-dark:   #3B49E6;
-  --color-dark:        #02033B; /* Updated to match Figma */
+  --color-dark:        #0d084d; /* Updated to match Figma */
   --color-dark-alt:    #16213E;
   --color-body-bg:     #FFFFFF;
   --color-section-bg:  #F7F8FC;
@@ -20,7 +20,7 @@
   --color-cta-bg:      #C8DDF9; 
 
   /* Text */
-  --color-text-primary:   #02033B;
+  --color-text-primary:   #0d084d;
   --color-text-secondary: #555B6E;
   --color-text-light:     #888EA8;
   --color-text-white:     #FFFFFF;
@@ -285,7 +285,7 @@ a { text-decoration: none; }
   top: 40px;
   left: 40px;
   right: 0;
-  bottom: 0;
+  bottom: 40px;
   background-color: var(--color-gold);
   overflow: hidden;
 }
@@ -323,11 +323,12 @@ a { text-decoration: none; }
   color: var(--color-text-primary);
   margin-bottom: 1.2rem;
   line-height: 1.1;
+  letter-spacing: -0.03em;
 }
 
 .hero-subtitle {
   font-size: 1.15rem;
-  color: var(--color-text-secondary);
+  color: var(--color-text-primary);
   max-width: 540px;
   margin-bottom: 2.5rem;
   line-height: 1.6;
