@@ -454,25 +454,48 @@ a { text-decoration: none; }
 }
 
 .mission-title {
-  font-size: clamp(2rem, 4vw, 3rem);
-  color: var(--color-text-primary);
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 900;
+  color: var(--color-dark);
   margin-bottom: 1.5rem;
-  line-height: 1.1;
+  line-height: 1.15;
+  font-style: italic;
 }
 
 .mission-body {
-  color: var(--color-text-secondary);
-  font-size: 1.1rem;
-  max-width: 500px;
+  color: var(--color-dark);
+  font-size: 1.05rem;
+  max-width: 460px;
   line-height: 1.7;
+}
+
+/* Photo wrapper with gold offset shadow */
+.mission-photo-wrapper {
+  position: relative;
+  display: inline-block;
+  max-width: 420px;
+  width: 100%;
+}
+
+.mission-photo-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: -16px;
+  bottom: -16px;
+  border: 3px solid var(--color-gold);
+  border-radius: var(--radius-xl);
+  z-index: 0;
 }
 
 .mission-photo {
   width: 100%;
-  max-width: 500px;
   border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-card);
   display: block;
+  position: relative;
+  z-index: 1;
 }
 
 /* ============================================================
