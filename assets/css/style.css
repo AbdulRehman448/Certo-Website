@@ -369,7 +369,12 @@ a { text-decoration: none; }
 }
 
 .reviews-section .section-title {
-  color: var(--color-white);
+.reviews-section .section-title {
+  color: var(--color-dark);
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 900;
+  line-height: 1.15;
+}
   font-size: clamp(1.8rem, 3.5vw, 2.5rem);
   font-weight: 900;
   line-height: 1.15;
@@ -406,7 +411,7 @@ a { text-decoration: none; }
   flex-shrink: 0;
 }
 
-.stars { color: var(--color-yellow); font-size: 1rem; margin-bottom: 1rem; }
+.stars { color: var(--color-gold); font-size: 1.1rem; margin-bottom: 1rem; }
 
 .review-text {
   color: var(--color-dark);
@@ -418,8 +423,9 @@ a { text-decoration: none; }
 
 .reviewer-name {
   font-weight: 800;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--color-dark);
+  display: block;
 }
 
 .featured-section {
