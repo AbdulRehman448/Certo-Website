@@ -304,7 +304,7 @@ a { text-decoration: none; }
 /* PHONE IMAGE – overlaps left edge of the blue panel */
 .hero-phone-ui {
   position: absolute;
-  height: 60%;
+  height: 65%;
   width: 55;
   left: 12%;
   top: 40%;
