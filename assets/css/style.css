@@ -688,13 +688,15 @@ a { text-decoration: none; }
 .site-footer {
   background-color: #02021E;
   color: #fff;
-  padding: 100px 0 60px;
+  padding: 80px 0 60px;
+  font-family: var(--font-body);
 }
 
 .footer-title-large {
-  font-size: 2.2rem;
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
   font-weight: 800;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .social-box {
@@ -706,20 +708,24 @@ a { text-decoration: none; }
   background-color: #fff;
   color: #02021E;
   border-radius: 8px;
-  font-size: 1.4rem;
-  transition: opacity 0.2s;
+  font-size: 1.5rem;
+  transition: transform 0.2s;
 }
 
 .social-box:hover {
-  opacity: 0.9;
+  transform: translateY(-3px);
   color: #02021E;
+}
+
+.footer-bottom-links {
+  margin-top: 3rem;
 }
 
 .footer-bottom-links a {
   color: #fff;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   text-decoration: underline;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .footer-info-text {
@@ -730,16 +736,17 @@ a { text-decoration: none; }
 
 /* Middle Col */
 .footer-nav-title {
-  font-size: 2rem;
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
   font-weight: 800;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.8rem;
 }
 
 .footer-nav-divider {
   width: 100%;
   height: 1px;
-  background-color: rgba(255, 255, 255, 0.2);
-  margin-bottom: 2rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 2.5rem;
 }
 
 .footer-nav-list {
@@ -748,12 +755,12 @@ a { text-decoration: none; }
 }
 
 .footer-nav-list li {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 
 .footer-nav-list a {
   color: var(--color-gold);
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 800;
   text-decoration: none;
   display: flex;
@@ -761,17 +768,17 @@ a { text-decoration: none; }
 }
 
 .footer-nav-list .dash {
-  width: 15px;
+  width: 20px;
   height: 2px;
   background-color: var(--color-gold);
-  margin-right: 12px;
+  margin-right: 15px;
 }
 
 /* Right Col: Newsletter */
 .newsletter-gold-box {
   background-color: var(--color-gold);
-  border-radius: 50px;
-  padding: 3.5rem 3rem;
+  border-radius: 40px;
+  padding: 3rem 2.5rem;
   color: var(--color-dark);
   position: relative;
   overflow: hidden;
@@ -780,10 +787,11 @@ a { text-decoration: none; }
 
 .newsletter-watermark {
   position: absolute;
-  right: -20px;
-  top: -20px;
-  height: 120%;
-  opacity: 0.15;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 140%;
+  opacity: 0.12;
   z-index: -1;
   pointer-events: none;
 }
