@@ -301,12 +301,19 @@ a { text-decoration: none; }
 .hero-phone-ui {
   position: absolute;
   top: 50%;
+  /* Using 50% left as a pivot point */
   left: 50%;
-  transform: translate(-75%, -50%);
+  /* 
+     Change -75% to -25% or -30% to move it right. 
+     -50% would center it exactly on the split line.
+  */
+  transform: translate(-30%, -50%); 
   width: 320px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
   border-radius: 36px;
   z-index: 3;
+  /* Ensure a smooth transition if you change positions later */
+  transition: transform 0.3s ease-in-out;
 }
 
 .hero-content {
