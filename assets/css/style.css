@@ -683,123 +683,157 @@ a { text-decoration: none; }
 }
 
 /* ============================================================
-   11. FOOTER
+   11. SITE FOOTER (NEW DESIGN)
    ============================================================ */
 .site-footer {
-  background-color: var(--color-dark);
+  background-color: #02021E;
   color: #fff;
+  padding: 100px 0 60px;
 }
 
-.footer-top {
-  padding: 80px 0 40px;
-}
-
-.footer-brand .logo-text { 
-  color: #fff; 
-  font-size: 1.8rem;
-}
-.footer-brand .logo-icon {
-  width: 44px;
-  height: 44px;
-  font-size: 1.4rem;
-}
-
-.footer-tagline {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #fff;
-  margin-top: 1rem;
+.footer-title-large {
+  font-size: 2.2rem;
+  font-weight: 800;
   margin-bottom: 2rem;
 }
 
-.social-icon {
+.social-box {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: transparent;
-  color: #fff;
-  font-size: 1.2rem;
-  border: 1px solid rgba(255,255,255,0.2);
-}
-.social-icon:hover {
-  background: #fff;
-  color: var(--color-dark);
-}
-
-.footer-heading {
-  font-family: var(--font-heading);
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: rgba(255,255,255,0.5);
-  margin-bottom: 1.2rem;
-}
-
-.footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.footer-links li { margin-bottom: 0.8rem; }
-.footer-links a {
-  color: #fff;
-  font-weight: 600;
-  font-size: 1rem;
-}
-
-.newsletter-box {
-  background-color: var(--color-gold);
-  border-radius: 32px;
-  padding: 2.5rem;
-}
-
-.newsletter-box .footer-heading {
-  color: var(--color-text-primary) !important;
+  width: 44px;
+  height: 44px;
+  background-color: #fff;
+  color: #02021E;
+  border-radius: 8px;
   font-size: 1.4rem;
-  font-weight: 800;
-  margin-bottom: 0.5rem;
-  text-transform: none;
-  letter-spacing: normal;
+  transition: opacity 0.2s;
 }
 
-.newsletter-desc {
-  font-size: 1rem;
-  color: var(--color-text-primary);
-  line-height: 1.5;
-  font-weight: 500;
+.social-box:hover {
+  opacity: 0.9;
+  color: #02021E;
 }
 
-.newsletter-input-light {
-  background: #fff;
-  border: none;
-  color: var(--color-text-primary);
-  border-radius: var(--radius-pill);
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  flex: 1;
-}
-.newsletter-input-light:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
+.footer-bottom-links a {
+  color: #fff;
+  font-size: 0.95rem;
+  text-decoration: underline;
+  opacity: 0.8;
 }
 
-.footer-bottom {
-  padding: 30px 0;
-  border-top: 1px solid rgba(255,255,255,0.1);
-}
-
-.footer-legal {
+.footer-info-text {
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.5);
+  opacity: 0.6;
   line-height: 1.6;
 }
 
-.footer-policy-link {
-  font-size: 0.9rem;
-  font-weight: 600;
+/* Middle Col */
+.footer-nav-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+.footer-nav-divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 2rem;
+}
+
+.footer-nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-nav-list li {
+  margin-bottom: 1.2rem;
+}
+
+.footer-nav-list a {
+  color: var(--color-gold);
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.footer-nav-list .dash {
+  width: 15px;
+  height: 2px;
+  background-color: var(--color-gold);
+  margin-right: 12px;
+}
+
+/* Right Col: Newsletter */
+.newsletter-gold-box {
+  background-color: var(--color-gold);
+  border-radius: 50px;
+  padding: 3.5rem 3rem;
+  color: var(--color-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.newsletter-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.newsletter-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.newsletter-form-pill {
+  background-color: #fff;
+  border-radius: 50px;
+  display: flex;
+  padding: 4px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.newsletter-form-pill input {
+  border: none;
+  background: transparent;
+  padding: 0 1.5rem;
+  flex: 1;
+  font-size: 1rem;
+  color: var(--color-dark);
+}
+
+.newsletter-form-pill input:focus {
+  outline: none;
+}
+
+.newsletter-form-pill button {
+  background-color: #02021E;
   color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 0.8rem 2rem;
+  font-weight: 800;
+  font-size: 1rem;
+  transition: opacity 0.2s;
+}
+
+.footer-white-box {
+  background-color: #fff;
+  height: 120px;
+  border-radius: 15px;
+  margin-top: 3rem;
+}
+
+.footer-disclaimer {
+  font-size: 0.8rem;
+  opacity: 0.5;
+  line-height: 1.8;
+  max-width: 600px;
 }
 
 /* Responsive utilities */
