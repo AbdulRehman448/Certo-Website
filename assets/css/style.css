@@ -845,16 +845,17 @@ a { text-decoration: none; }
 
 .footer-white-box {
   background-color: #fff;
-  height: 160px;
+  height: 180px;
   border-radius: 20px;
   margin-top: 2rem;
 }
 
 .footer-disclaimer {
-  font-size: 0.8rem;
-  opacity: 0.5;
+  font-size: 0.75rem;
+  opacity: 0.4;
   line-height: 1.8;
-  max-width: 600px;
+  max-width: 650px;
+  margin: 0;
 }
 
 /* Responsive utilities */
