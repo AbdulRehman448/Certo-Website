@@ -49,7 +49,6 @@ Responsive behavior is implemented with Bootstrap grid classes and custom media 
 ```text
 .
 ├─ index.html
-├─ gallery.html
 ├─ README.md
 └─ assets/
    ├─ css/
@@ -66,12 +65,6 @@ Responsive behavior is implemented with Bootstrap grid classes and custom media 
       └─ t1.png ... t6.png
 ```
 
-## How to Use 👣
-
-1. Open `index.html` in a browser.
-2. Adjust content, images, or text inside `index.html` as needed.
-3. Update the visual design in `assets/css/style.css`.
-4. Replace or expand media assets inside `assets/images/` when required.
 
 ## Notes 📝
 
@@ -79,8 +72,10 @@ Responsive behavior is implemented with Bootstrap grid classes and custom media 
 - All external libraries are loaded from CDNs.
 - The design is optimized for a premium, conversion-oriented presentation.
 
-## Contact 📬
+## 👨‍💻 Developer
 
-Abdul Rehman Ali  
-Email: abdulrehman.tp.786@gmail.com  
-LinkedIn: https://www.linkedin.com/in/abdul-rehman-ali/
+**Abdul Rehman Ali**
+
+- 📧 Email: [abdulrehman.tp.786@gmail.com](mailto:abdulrehman.tp.786@gmail.com)
+- 💼 LinkedIn: [Abdul Rehman Ali](https://www.linkedin.com/in/abdul-rehman-ali/)
+
