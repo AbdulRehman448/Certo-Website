@@ -494,7 +494,8 @@ a { text-decoration: none; }
 }
 
 .featured-logo-item {
-  height: 38px;
+  height: 45px;
+  max-width: 140px;
   width: auto;
   object-fit: contain;
   transition: opacity 0.3s;
