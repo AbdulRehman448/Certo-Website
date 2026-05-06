@@ -8,30 +8,33 @@
    ============================================================ */
 :root {
   /* Brand Colors */
-  --color-gold:        #F9B327; /* Updated to match reference image */
-  --color-gold-dark:   #E2A822;
-  --color-blue:        #4A5BFF; /* Updated to match Figma */
-  --color-blue-dark:   #3F4EE6;
-  --color-dark:        #0d084d; /* Updated to match Figma */
-  --color-dark-alt:    #16213E;
-  --color-body-bg:     #FFFFFF;
-  --color-section-bg:  #F4F7FC;
-  --color-features-bg: #EEF3F9; 
-  --color-cta-bg:      #E7EFFB; 
+  --color-gold: #F9B327;
+  /* Updated to match reference image */
+  --color-gold-dark: #E2A822;
+  --color-blue: #4A5BFF;
+  /* Updated to match Figma */
+  --color-blue-dark: #3F4EE6;
+  --color-dark: #0d084d;
+  /* Updated to match Figma */
+  --color-dark-alt: #16213E;
+  --color-body-bg: #FFFFFF;
+  --color-section-bg: #F4F7FC;
+  --color-features-bg: #EEF3F9;
+  --color-cta-bg: #E7EFFB;
 
   /* Text */
-  --color-text-primary:   #0d084d;
+  --color-text-primary: #0d084d;
   --color-text-secondary: #555B6E;
-  --color-text-light:     #888EA8;
-  --color-text-white:     #FFFFFF;
-  --color-purple:         #3D39FF;
-  --color-purple-dark:    #2F2BD8;
+  --color-text-light: #888EA8;
+  --color-text-white: #FFFFFF;
+  --color-purple: #3D39FF;
+  --color-purple-dark: #2F2BD8;
 
   /* Radius */
-  --radius-sm:   6px;
-  --radius-md:   12px;
-  --radius-lg:   24px;
-  --radius-xl:   32px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
   --radius-pill: 100px;
 
   /* Spacing */
@@ -39,7 +42,7 @@
 
   /* Typography */
   --font-heading: 'Sora', sans-serif;
-  --font-body:    'DM Sans', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
 
   /* Shadows */
   --shadow-card: 0 4px 24px rgba(6, 11, 39, 0.08);
@@ -49,9 +52,15 @@
 /* ============================================================
    2. RESET & BASE
    ============================================================ */
-*, *::before, *::after { box-sizing: border-box; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: var(--font-body);
@@ -62,15 +71,25 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.2;
 }
 
-img { max-width: 100%; height: auto; }
+img {
+  max-width: 100%;
+  height: auto;
+}
 
-a { text-decoration: none; }
+a {
+  text-decoration: none;
+}
 
 .section-title {
   font-size: clamp(2rem, 3.6vw, 2.8rem);
@@ -101,13 +120,14 @@ a { text-decoration: none; }
 
 .brand-text {
   /* Use 800 or 900 for that thick, heavy look in the image */
-  font-weight: 800; 
+  font-weight: 800;
   font-size: 1.8rem;
-  color: #0d084d; /* Dark navy color from image_5d249e.png */
-  
+  color: #0d084d;
+  /* Dark navy color from image_5d249e.png */
+
   /* Tighten letter spacing slightly to match the compact brand look */
-  letter-spacing: -0.03em; 
-  
+  letter-spacing: -0.03em;
+
   /* Ensure it aligns perfectly with the shield icon */
   line-height: 1;
 }
@@ -118,6 +138,7 @@ a { text-decoration: none; }
   color: var(--color-text-primary);
   border: 2px solid var(--color-gold);
 }
+
 .btn-certo-primary:hover,
 .btn-certo-primary:focus {
   background-color: var(--color-gold-dark);
@@ -133,6 +154,7 @@ a { text-decoration: none; }
   color: var(--color-text-primary);
   border: 2px solid var(--color-text-primary);
 }
+
 .btn-certo-outline-dark:hover,
 .btn-certo-outline-dark:focus {
   background-color: var(--color-text-primary);
@@ -147,6 +169,7 @@ a { text-decoration: none; }
   border: 2px solid var(--color-text-primary);
   border-radius: var(--radius-pill);
 }
+
 .btn-certo-outline:hover,
 .btn-certo-outline:focus {
   background-color: var(--color-text-primary);
@@ -161,6 +184,7 @@ a { text-decoration: none; }
   color: var(--color-blue);
   border: 2px solid #fff;
 }
+
 .btn-certo-white:hover,
 .btn-certo-white:focus {
   background-color: transparent;
@@ -175,6 +199,7 @@ a { text-decoration: none; }
   color: var(--color-text-white);
   border: 2px solid var(--color-blue);
 }
+
 .btn-certo-blue:hover,
 .btn-certo-blue:focus {
   background-color: var(--color-blue-dark);
@@ -189,6 +214,7 @@ a { text-decoration: none; }
   color: #fff;
   border: 2px solid var(--color-purple);
 }
+
 .btn-certo-purple:hover,
 .btn-certo-purple:focus {
   background-color: var(--color-purple-dark);
@@ -203,6 +229,7 @@ a { text-decoration: none; }
   color: var(--color-text-white);
   border: 2px solid #fff;
 }
+
 .btn-certo-outline-light:hover,
 .btn-certo-outline-light:focus {
   background-color: #fff;
@@ -256,7 +283,10 @@ a { text-decoration: none; }
   padding: 0.3rem 1.2rem;
   transition: color 0.18s;
 }
-.certo-navbar .nav-link:hover { color: var(--color-blue); }
+
+.certo-navbar .nav-link:hover {
+  color: var(--color-blue);
+}
 
 .btn-sign-in {
   background-color: var(--color-blue);
@@ -266,6 +296,7 @@ a { text-decoration: none; }
   font-weight: 800;
   padding: 0.7rem 2rem;
 }
+
 .btn-sign-in:hover {
   background-color: var(--color-blue-dark);
   color: white;
@@ -290,7 +321,7 @@ a { text-decoration: none; }
   left: -10%;
   width: 60%;
   height: 140%;
-  background: radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(244,247,252,0) 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(244, 247, 252, 0) 70%);
   z-index: 0;
 }
 
@@ -308,10 +339,14 @@ a { text-decoration: none; }
 /* INNER GOLD BOX – offset from top & left so blue border peeks through */
 .hero-gold-box {
   position: absolute;
-  top: 22px;      /* blue visible on TOP */
-  left: 22px;     /* blue visible on LEFT */
-  right: 0;       /* flush to right edge */
-  bottom: 0;      /* flush to bottom edge */
+  top: 22px;
+  /* blue visible on TOP */
+  left: 22px;
+  /* blue visible on LEFT */
+  right: 0;
+  /* flush to right edge */
+  bottom: 0;
+  /* flush to bottom edge */
   background-color: var(--color-gold);
   overflow: hidden;
 }
@@ -335,7 +370,7 @@ a { text-decoration: none; }
   transform: translateY(-50%);
   z-index: 3;
   border-radius: 32px;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.22);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.22);
 }
 
 /* TEXT CONTENT */
@@ -431,7 +466,10 @@ a { text-decoration: none; }
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-.reviews-scroll-track::-webkit-scrollbar { display: none; }
+
+.reviews-scroll-track::-webkit-scrollbar {
+  display: none;
+}
 
 .reviews-scroll {
   display: flex;
@@ -441,14 +479,17 @@ a { text-decoration: none; }
 }
 
 @media (max-width: 1199.98px) {
-  .reviews-scroll { padding: 0 24px; padding-right: 60px; }
+  .reviews-scroll {
+    padding: 0 24px;
+    padding-right: 60px;
+  }
 }
 
 .review-card {
   background: #fff;
   border-radius: 40px;
   padding: 45px 40px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
   min-width: 360px;
   max-width: 420px;
   flex-shrink: 0;
@@ -456,10 +497,10 @@ a { text-decoration: none; }
   flex-direction: column;
 }
 
-.stars { 
-  color: #ffb800; 
-  font-size: 1.3rem; 
-  margin-bottom: 25px; 
+.stars {
+  color: #ffb800;
+  font-size: 1.3rem;
+  margin-bottom: 25px;
 }
 
 .review-text {
@@ -643,9 +684,10 @@ a { text-decoration: none; }
   align-items: flex-start;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .dual-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 45px rgba(0,0,0,0.08);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
 }
 
 .dual-card h3 {
@@ -718,7 +760,7 @@ a { text-decoration: none; }
   background: #fff;
   border-radius: var(--radius-xl);
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -774,7 +816,8 @@ a { text-decoration: none; }
    11. SITE FOOTER
    ============================================================ */
 .site-footer {
-  background-color: #000033; /* The dark navy from the image */
+  background-color: #000033;
+  /* The dark navy from the image */
   color: #ffffff;
   padding: 100px 8% 50px;
   font-family: var(--font-body);
@@ -839,7 +882,8 @@ a { text-decoration: none; }
   font-weight: 500;
 }
 
-.copyright-text, .credits {
+.copyright-text,
+.credits {
   font-size: 0.85rem;
   opacity: 0.6;
   margin-bottom: 8px;
@@ -861,7 +905,8 @@ a { text-decoration: none; }
 }
 
 .nav-links li a {
-  color: #ffb800; /* Bright yellow from image */
+  color: #ffb800;
+  /* Bright yellow from image */
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 700;
@@ -878,102 +923,117 @@ a { text-decoration: none; }
 
 /* Newsletter Box */
 .newsletter-box {
-    background-color: #ffb800; /* Uses the yellow from the second image */
-    color: #000033;            /* Deep navy for text */
-    padding: 40px;
-    border-radius: 40px;
-    max-width: 450px;
-    
-    /* Technical detail: ensures watermark doesn't break the layout */
-    position: relative; 
-    overflow: hidden; 
+  background-color: #ffb800;
+  /* Uses the yellow from the second image */
+  color: #000033;
+  /* Deep navy for text */
+  padding: 40px;
+  border-radius: 40px;
+  max-width: 450px;
+
+  /* Technical detail: ensures watermark doesn't break the layout */
+  position: relative;
+  overflow: hidden;
 }
 
 /* Watermark using pseudo-element for maximum control */
 .newsletter-box::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    height: 80%;
-    background-image: url('../images/logo.png'); /* Logo watermark */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    opacity: 0.15; /* Subtle ghost effect */
-    z-index: 0;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background-image: url('../images/logo.png');
+  /* Logo watermark */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.15;
+  /* Subtle ghost effect */
+  z-index: 0;
 }
 
 /* Ensure content sits above the watermark */
-.newsletter-box > * {
-    position: relative;
-    z-index: 1;
+.newsletter-box>* {
+  position: relative;
+  z-index: 1;
 }
 
 /* Typography matching design */
 .newsletter-box h3 {
-    font-size: 1.8rem;
-    font-weight: 800;
-    margin-bottom: 15px;
-    line-height: 1.2;
-    font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  line-height: 1.2;
+  font-family: var(--font-heading);
 }
 
 .newsletter-box p {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 25px;
-    opacity: 0.9;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  opacity: 0.9;
 }
 
 /* The unified input group */
 .newsletter-input-group {
-    display: flex;
-    background-color: #ffffff; /* White background for the entire 'pill' */
-    border-radius: 50px;       /* Perfect pill shape */
-    padding: 4px;             /* Slight padding creates the border effect */
-    margin-top: 25px;
-    overflow: hidden;          /* Keeps elements contained */
+  display: flex;
+  background-color: #ffffff;
+  /* White background for the entire 'pill' */
+  border-radius: 50px;
+  /* Perfect pill shape */
+  padding: 4px;
+  /* Slight padding creates the border effect */
+  margin-top: 25px;
+  overflow: hidden;
+  /* Keeps elements contained */
 }
 
 /* Styling the actual text input */
 .newsletter-input-group input {
-    flex: 1;                  /* Takes up remaining space */
-    border: none;             /* NO border on the input itself */
-    background: transparent; /* Inherits white from the parent */
-    padding: 12px 20px;
-    font-size: 1rem;
-    color: #000033;
-    outline: none;            /* Removes default focus blue ring */
+  flex: 1;
+  /* Takes up remaining space */
+  border: none;
+  /* NO border on the input itself */
+  background: transparent;
+  /* Inherits white from the parent */
+  padding: 12px 20px;
+  font-size: 1rem;
+  color: #000033;
+  outline: none;
+  /* Removes default focus blue ring */
 }
 
 /* Placeholder color */
 .newsletter-input-group input::placeholder {
-    color: #64748b;
+  color: #64748b;
 }
 
 /* Styling the Submit Button to sit perfectly on the right */
 .newsletter-input-group .btn-submit {
-    background-color: #000033; /* Deep navy button color */
-    color: #ffffff;
-    border: none;
-    padding: 0 35px;          /* Width matching design */
-    border-radius: 40px;       /* Inner pill rounding */
-    font-weight: 700;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    
-    /* Ensure text is centered within the button space */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: #000033;
+  /* Deep navy button color */
+  color: #ffffff;
+  border: none;
+  padding: 0 35px;
+  /* Width matching design */
+  border-radius: 40px;
+  /* Inner pill rounding */
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  /* Ensure text is centered within the button space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Hover state for usability */
 .newsletter-input-group .btn-submit:hover {
-    background-color: #0a1f44;
+  background-color: #0a1f44;
 }
 
 .extra-box {
@@ -984,66 +1044,79 @@ a { text-decoration: none; }
 }
 
 .footer-center {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 /* THE BUTTON PILL: Expert Implementation */
 .btn-insights-pill {
-    /* Layout & Alignment */
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px; /* Perfect spacing between text and arrow */
-    
-    /* Colors (Matching image_9.png) */
-    background-color: #ffb800; /* Rich gold/yellow */
-    color: #000033;            /* Deep navy */
-    
-    /* Sizing & Border-Radius */
-    padding: 16px 35px;        /* Wide padding for that flat aesthetic */
-    border-radius: 50px;       /* Pill shape */
-    
-    /* Typography */
-    font-weight: 700;          /* Bold weight */
-    font-size: 1.1rem;
-    text-decoration: none;     /* Removes link underline */
-    
-    /* Technical Detail: Smooth transitions for hover */
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    
-    /* Ensures this doesn't conflict with legacy footer link styling */
-    margin-top: 15px;
-    border: none;
-    cursor: pointer;
+  /* Layout & Alignment */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  /* Perfect spacing between text and arrow */
+
+  /* Colors (Matching image_9.png) */
+  background-color: #ffb800;
+  /* Rich gold/yellow */
+  color: #000033;
+  /* Deep navy */
+
+  /* Sizing & Border-Radius */
+  padding: 16px 35px;
+  /* Wide padding for that flat aesthetic */
+  border-radius: 50px;
+  /* Pill shape */
+
+  /* Typography */
+  font-weight: 700;
+  /* Bold weight */
+  font-size: 1.1rem;
+  text-decoration: none;
+  /* Removes link underline */
+
+  /* Technical Detail: Smooth transitions for hover */
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+
+  /* Ensures this doesn't conflict with legacy footer link styling */
+  margin-top: 15px;
+  border: none;
+  cursor: pointer;
 }
 
 /* Arrow specific styling for control */
 .btn-arrow {
-    font-size: 1.3rem; /* Slightly larger for emphasis */
-    line-height: 1;    /* Ensures perfect centering on the line */
-    transition: transform 0.3s ease;
+  font-size: 1.3rem;
+  /* Slightly larger for emphasis */
+  line-height: 1;
+  /* Ensures perfect centering on the line */
+  transition: transform 0.3s ease;
 }
 
 /* PROFESSIONAL INTERACTIONS */
 
 /* Hover State: Subtle color shift and interaction */
 .btn-insights-pill:hover {
-    background-color: #ffc107; /* A slightly brighter gold */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Modern, soft shadow */
-    color: #000033;
+  background-color: #ffc107;
+  /* A slightly brighter gold */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  /* Modern, soft shadow */
+  color: #000033;
 }
 
 /* Moving the arrow on hover (micro-interaction) */
 .btn-insights-pill:hover .btn-arrow {
-    transform: translateX(6px); /* Moves arrow slightly right */
+  transform: translateX(6px);
+  /* Moves arrow slightly right */
 }
 
 /* Active/Click State: Slight compression for feedback */
 .btn-insights-pill:active {
-    transform: translateY(1px); /* Compresses down slightly */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(1px);
+  /* Compresses down slightly */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Bottom Disclaimer */
@@ -1057,11 +1130,25 @@ a { text-decoration: none; }
 
 /* Responsive utilities */
 @media (max-width: 991.98px) {
-  .hero-right-col { display: none; }
-  .hero-section { min-height: auto; }
-  .features-heading { margin-bottom: 2rem; }
-  .features-card { padding: 2.5rem 1.5rem; }
-  .dual-card { padding: 2.5rem 2rem; }
+  .hero-right-col {
+    display: none;
+  }
+
+  .hero-section {
+    min-height: auto;
+  }
+
+  .features-heading {
+    margin-bottom: 2rem;
+  }
+
+  .features-card {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .dual-card {
+    padding: 2.5rem 2rem;
+  }
 }
 
 @media (max-width: 575.98px) {
