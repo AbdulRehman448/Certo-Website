@@ -487,9 +487,15 @@ a { text-decoration: none; }
   white-space: nowrap;
 }
 
-.featured-tags-img {
-  max-width: 750px;
-  height: auto;
+.featured-logo-item {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  transition: opacity 0.3s;
+}
+
+.featured-logo-item:hover {
+  opacity: 0.7;
 }
 
 /* ============================================================
