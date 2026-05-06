@@ -297,26 +297,6 @@ a {
     padding: 12px 15px;
     position: static;
   }
-
-  .mobile-nav-backdrop {
-    position: fixed;
-    inset: 0;
-    background: rgba(6, 11, 39, 0.35);
-    backdrop-filter: blur(2px);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.25s ease;
-    z-index: 1040;
-  }
-
-  body.nav-open .mobile-nav-backdrop {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  body.nav-open {
-    overflow: hidden;
-  }
   
   .certo-logo {
     gap: 8px;
@@ -360,7 +340,6 @@ a {
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     flex-direction: column !important;
     display: flex !important;
-    box-shadow: 14px 0 35px rgba(13, 8, 77, 0.18);
   }
 
   .navbar-collapse.show {
@@ -369,24 +348,16 @@ a {
     background: #F4F7FC !important;
   }
 
-  .nav-close-btn {
-    align-self: flex-end;
-    width: 40px;
-    height: 40px;
-    border: 0;
-    border-radius: 999px;
-    background: rgba(74, 91, 255, 0.1);
-    color: var(--color-blue);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 14px;
-    transition: transform 0.2s ease, background 0.2s ease;
-  }
-
-  .nav-close-btn:hover {
-    background: rgba(74, 91, 255, 0.18);
-    transform: rotate(90deg);
+  /* Overlay backdrop when navbar is open */
+  .navbar-collapse.show::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 280px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
   }
   
   .collapse.show {
@@ -401,33 +372,6 @@ a {
     flex-direction: column !important;
     gap: 0 !important;
     margin-bottom: 20px;
-  }
-
-  .navbar-nav .nav-item {
-    opacity: 0;
-    transform: translateX(-14px);
-    transition: transform 0.35s ease, opacity 0.35s ease;
-  }
-
-  .navbar-collapse.show .navbar-nav .nav-item {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  .navbar-collapse.show .navbar-nav .nav-item:nth-child(1) {
-    transition-delay: 0.04s;
-  }
-
-  .navbar-collapse.show .navbar-nav .nav-item:nth-child(2) {
-    transition-delay: 0.09s;
-  }
-
-  .navbar-collapse.show .navbar-nav .nav-item:nth-child(3) {
-    transition-delay: 0.14s;
-  }
-
-  .navbar-collapse.show .navbar-nav .nav-item:nth-child(4) {
-    transition-delay: 0.19s;
   }
   
   .certo-navbar .nav-link {
@@ -482,15 +426,6 @@ a {
     align-items: center;
     justify-content: center;
     border: none;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: transform 0.35s ease, opacity 0.35s ease, background-color 0.2s ease;
-  }
-
-  .navbar-collapse.show .btn-sign-in {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 0.22s;
   }
 
   .btn-sign-in:hover {

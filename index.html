@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -12,7 +12,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <!-- Google Fonts -->
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Sora:wght@400;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Sora:wght@400;600;700;800&family=Inter:wght@400;600;700;800&display=swap"
     rel="stylesheet" />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
@@ -109,7 +109,7 @@
          REVIEWS & FEATURED IN SECTION START
     ============================================================ -->
     <div class="bg-gold-wrapper">
-      <section id="reviews" class="reviews-section">
+      <section class="reviews-section">
         <div class="container">
           <h2 class="section-title mb-5">
             Loved by thousands of iPhone<br>and Android users alike
@@ -477,9 +477,9 @@
         <div class="footer-left">
           <h2 class="brand-statement">Scan. Detect. Remove.</h2>
           <div class="social-icons">
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
           </div>
           <div class="footer-legal">
             <a href="#">Privacy Policy</a>
@@ -502,7 +502,7 @@
             <li><a href="#">Insights</a></li>
           </ul>
           <a href="#reviews" class="btn-insights-pill">
-            <span>View all insights</span>
+            <span data-i18n="navReviews">View all insights</span>
             <span class="btn-arrow">→</span>
           </a>
         </div>
@@ -510,7 +510,7 @@
         <!-- Right Column -->
         <div class="footer-right">
           <div class="newsletter-box">
-            <h3>Sign up to our newsletter</h3>
+            <h3 data-i18n="exitTitle">Sign up to our newsletter</h3>
             <p>Receive the latest mobile security news, exclusive discounts & offers straight to your inbox!</p>
             
             <form class="newsletter-input-group">
@@ -518,6 +518,7 @@
               <button type="submit" class="btn-submit">Submit</button>
             </form>
           </div>
+          <div class="extra-box"></div>
         </div>
       </div>
 
@@ -532,4 +533,5 @@
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
+
 </html>
