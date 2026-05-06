@@ -303,6 +303,157 @@ a {
 }
 
 /* ============================================================
+   4A. TABLET & MOBILE NAV UX
+   ============================================================ */
+.mobile-nav-backdrop,
+.nav-panel-close {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  .certo-navbar {
+    padding: 12px 0;
+  }
+
+  .navbar-toggler {
+    border: 0;
+    padding: 0.2rem 0.35rem;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .navbar-collapse {
+    background: #ffffff;
+    margin-top: 14px;
+    padding: 14px 16px;
+    border-radius: 14px;
+    box-shadow: 0 14px 35px rgba(13, 8, 77, 0.12);
+  }
+
+  .certo-navbar .nav-link {
+    padding: 10px 12px;
+    border-radius: 10px;
+  }
+
+  .btn-sign-in {
+    margin-left: 0 !important;
+    margin-top: 12px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .certo-navbar {
+    padding: 12px 0;
+    position: relative;
+    z-index: 1001;
+  }
+
+  .brand-text {
+    font-size: 1.55rem;
+  }
+
+  .mobile-nav-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(7, 11, 36, 0.35);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.28s ease;
+    z-index: 1090;
+  }
+
+  body.mobile-nav-open .mobile-nav-backdrop {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  body.mobile-nav-open {
+    overflow: hidden;
+  }
+
+  #mainNav {
+    display: block !important;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: min(85vw, 320px);
+    height: 100vh;
+    background: #F4F7FC;
+    border-right: 1px solid #dde5f1;
+    box-shadow: 16px 0 40px rgba(13, 8, 77, 0.18);
+    padding: 18px 16px 24px;
+    transform: translateX(-104%);
+    transition: transform 0.33s cubic-bezier(0.2, 0.7, 0.2, 1);
+    z-index: 1100;
+    overflow-y: auto;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  #mainNav.mobile-open {
+    transform: translateX(0);
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .nav-panel-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    margin-left: auto;
+    margin-bottom: 12px;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(74, 91, 255, 0.12);
+    color: var(--color-blue);
+    font-size: 1rem;
+  }
+
+  .navbar-nav {
+    gap: 0 !important;
+    margin-bottom: 16px;
+  }
+
+  .certo-navbar .nav-link {
+    padding: 12px 2px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-bottom: 1px solid #dde5f1;
+  }
+
+  .certo-navbar .dropdown-menu {
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+    margin: 4px 0 0;
+    padding: 0 0 8px 12px;
+  }
+
+  .certo-navbar .dropdown-item {
+    padding: 8px 0;
+    font-weight: 600;
+    color: #334155;
+  }
+
+  .btn-sign-in {
+    margin: 10px 0 0 !important;
+    width: 100%;
+    justify-content: center;
+    padding: 0.78rem 1.25rem;
+    background: #4A5BFF;
+    color: #fff;
+  }
+}
+
+/* ============================================================
    5. HERO SECTION
    ============================================================ */
 .hero-section {
@@ -1280,5 +1431,169 @@ a {
 
   .site-footer {
     padding: 60px 5% 40px;
+  }
+}
+
+/* ============================================================
+   12. RESPONSIVE TUNING (TABLET + MOBILE)
+   ============================================================ */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .hero-container {
+    min-height: auto;
+    padding: 48px 4%;
+    text-align: center;
+  }
+
+  .hero-content {
+    flex: 1 1 100%;
+    padding-right: 0;
+    margin-bottom: 34px;
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 2.45rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+    margin-inline: auto;
+  }
+
+  .hero-cta-group {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .hero-visual-frame {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+
+  .reviews-section,
+  .mission-section,
+  .features-section,
+  .insights-section,
+  .cta-banner-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .site-footer {
+    padding: 70px 6% 44px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-container {
+    flex-direction: column-reverse;
+    min-height: auto;
+    padding: 32px 16px 40px;
+    text-align: center;
+  }
+
+  .hero-content {
+    flex: 1 1 100%;
+    padding-right: 0;
+    margin-bottom: 0;
+    margin-top: 22px;
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    line-height: 1.15;
+    margin-bottom: 14px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.98rem;
+    margin-bottom: 20px;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn-pill {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 18px;
+    font-size: 1rem;
+  }
+
+  .hero-visual-frame {
+    border-width: 10px;
+    border-right-width: 10px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    margin-bottom: 6px;
+  }
+
+  .phone-mockup {
+    width: 40%;
+    left: 8%;
+  }
+
+  .reviews-section,
+  .mission-section,
+  .features-section,
+  .insights-section,
+  .cta-banner-section {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+
+  .section-title,
+  .features-title,
+  .cta-banner-title {
+    font-size: 1.72rem;
+    line-height: 1.2;
+  }
+
+  .reviews-scroll {
+    gap: 16px;
+    padding: 0 16px 0 16px;
+  }
+
+  .review-card {
+    min-width: 86vw;
+    max-width: 86vw;
+    padding: 24px 20px;
+    border-radius: 24px;
+  }
+
+  .featured-section {
+    padding: 20px 0 58px;
+  }
+
+  .mission-photo-wrapper::after {
+    top: 9px;
+    left: 9px;
+    right: -9px;
+    bottom: -9px;
+  }
+
+  .features-card {
+    padding: 1.4rem 1rem;
+    border-radius: 20px;
+  }
+
+  .dual-card {
+    padding: 1.6rem 1.2rem;
+    border-radius: 18px;
+    min-height: auto;
+  }
+
+  .insight-body {
+    padding: 1.3rem;
+  }
+
+  .site-footer {
+    padding: 50px 16px 34px;
   }
 }
