@@ -336,28 +336,53 @@ a {
   z-index: 1;
 }
 
-/* INNER GOLD BOX – offset from top & left so blue border peeks through */
-.hero-gold-box {
+/* INNER WRAPPER – offset from top & left so blue border peeks through */
+.image-wrapper {
   position: absolute;
-  top: 22px;
-  /* blue visible on TOP */
-  left: 22px;
-  /* blue visible on LEFT */
-  right: 0;
-  /* flush to right edge */
-  bottom: 0;
-  /* flush to bottom edge */
-  background-color: var(--color-gold);
+  top: 22px;      /* blue visible on TOP */
+  left: 22px;     /* blue visible on LEFT */
+  right: 0;       /* flush to right edge */
+  bottom: 0;      /* flush to bottom edge */
+  background-color: #fff;
   overflow: hidden;
+  border: 15px solid #4338ca; /* The blue border from design */
+  z-index: 2;
 }
 
-/* BACKGROUND IMAGE (MAN) – golden tint overlay */
-.hero-man-img {
+.image-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.68;
-  mix-blend-mode: multiply;
+  display: block;
+}
+
+/* This creates the orange color tint */
+.image-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* The exact orange color from reference */
+  background-color: #f97316; 
+  
+  /* This blend mode creates the monochromatic effect */
+  mix-blend-mode: multiply; 
+  
+  pointer-events: none;
+}
+
+.accent-border {
+  position: absolute;
+  top: 20px;
+  right: -20px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #ffb800; /* Gold frame color */
+  border-radius: 8px;
+  z-index: -1;
 }
 
 /* PHONE IMAGE – overlaps left edge of the blue panel */
