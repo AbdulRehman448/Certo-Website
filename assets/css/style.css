@@ -9,17 +9,12 @@
 :root {
   /* Brand Colors */
   --color-gold: #F9B327;
-  /* Updated to match reference image */
   --color-gold-dark: #E2A822;
   --color-blue: #4A5BFF;
-  /* Updated to match Figma */
   --color-blue-dark: #3F4EE6;
   --color-dark: #0d084d;
-  /* Updated to match Figma */
-  --color-dark-alt: #16213E;
   --color-body-bg: #FFFFFF;
   --color-section-bg: #F4F7FC;
-  --color-features-bg: #EEF3F9;
   --color-cta-bg: #E7EFFB;
 
   /* Text */
@@ -37,16 +32,9 @@
   --radius-xl: 32px;
   --radius-pill: 100px;
 
-  /* Spacing */
-  --section-py: 80px;
-
   /* Typography */
   --font-heading: 'Sora', sans-serif;
   --font-body: 'DM Sans', sans-serif;
-
-  /* Shadows */
-  --shadow-card: 0 4px 24px rgba(6, 11, 39, 0.08);
-  --shadow-card-hover: 0 8px 36px rgba(6, 11, 39, 0.14);
 }
 
 /* ============================================================
@@ -113,22 +101,11 @@ a {
   justify-content: center;
 }
 
-.btn-sm {
-  padding: 0.5rem 1.25rem;
-  font-size: 0.85rem;
-}
-
 .brand-text {
-  /* Use 800 or 900 for that thick, heavy look in the image */
   font-weight: 800;
   font-size: 1.8rem;
   color: #0d084d;
-  /* Dark navy color from image_5d249e.png */
-
-  /* Tighten letter spacing slightly to match the compact brand look */
   letter-spacing: -0.03em;
-
-  /* Ensure it aligns perfectly with the shield icon */
   line-height: 1;
 }
 
@@ -178,36 +155,6 @@ a {
   transform: translateY(-2px);
 }
 
-/* White */
-.btn-certo-white {
-  background-color: #fff;
-  color: var(--color-blue);
-  border: 2px solid #fff;
-}
-
-.btn-certo-white:hover,
-.btn-certo-white:focus {
-  background-color: transparent;
-  color: #fff;
-  border-color: #fff;
-  transform: translateY(-2px);
-}
-
-/* Blue */
-.btn-certo-blue {
-  background-color: var(--color-blue);
-  color: var(--color-text-white);
-  border: 2px solid var(--color-blue);
-}
-
-.btn-certo-blue:hover,
-.btn-certo-blue:focus {
-  background-color: var(--color-blue-dark);
-  border-color: var(--color-blue-dark);
-  color: var(--color-text-white);
-  transform: translateY(-2px);
-}
-
 /* Purple */
 .btn-certo-purple {
   background-color: var(--color-purple);
@@ -220,20 +167,6 @@ a {
   background-color: var(--color-purple-dark);
   border-color: var(--color-purple-dark);
   color: #fff;
-  transform: translateY(-2px);
-}
-
-/* Outline Light */
-.btn-certo-outline-light {
-  background-color: transparent;
-  color: var(--color-text-white);
-  border: 2px solid #fff;
-}
-
-.btn-certo-outline-light:hover,
-.btn-certo-outline-light:focus {
-  background-color: #fff;
-  color: var(--color-text-primary);
   transform: translateY(-2px);
 }
 
@@ -250,29 +183,6 @@ a {
   align-items: center;
   gap: 8px;
   color: var(--color-dark) !important;
-}
-
-.logo-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  background-color: var(--color-gold);
-  color: var(--color-dark);
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 1.1rem;
-  border-radius: 8px;
-}
-
-.logo-text {
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 1.7rem;
-  color: var(--color-dark);
-  letter-spacing: -0.03em;
-  line-height: 1;
 }
 
 .certo-navbar .nav-link {
@@ -305,37 +215,16 @@ a {
 /* ============================================================
    5. HERO SECTION
    ============================================================ */
-.hero-section {
-  background: #F4F7FC;
-  position: relative;
-  overflow: hidden;
-  padding: 0;
-  min-height: 680px;
-}
-
-/* subtle left light fade */
-.hero-section::before {
-  content: '';
-  position: absolute;
-  top: -20%;
-  left: -10%;
-  width: 60%;
-  height: 140%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(244, 247, 252, 0) 70%);
-  z-index: 0;
-}
-
-/* ============================================================
-   5. HERO SECTION
-   ============================================================ */
 .hero-container {
-  display: block;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   background: linear-gradient(135deg, #f0f6ff 0%, #ffffff 100%);
   min-height: 85vh;
-  padding: 60px 0;
+  padding: 60px 8%;
   overflow: hidden;
   position: relative;
+  gap: 40px;
 }
 
 /* Text Section */
@@ -439,8 +328,7 @@ a {
 
 .orange-tint-wrapper {
   position: relative;
-  background-color: hsl((255, 179, 62));
-  /* Base orange color */
+  background-color: #ffb33e;
   line-height: 0;
   width: 100%;
 }
@@ -449,7 +337,6 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* This creates the monochromatic effect */
   mix-blend-mode: multiply;
   opacity: 0.9;
 }
@@ -486,8 +373,6 @@ a {
   }
 }
 
-/* Mobile Responsiveness */
-/* Tablet and below */
 @media (max-width: 768px) {
   .hero-container {
     flex-direction: column;
@@ -516,6 +401,7 @@ a {
   .hero-title {
     font-size: 2.2rem;
   }
+
 }
 
 /* Small mobile (360px) specific tweaks */
@@ -560,41 +446,6 @@ a {
     width: 34%;
     left: 12%;
   }
-}
-
-/* Offcanvas (left slide) navbar tweaks */
-.offcanvas {
-  --bs-offcanvas-width: 300px;
-}
-
-@media (min-width: 992px) {
-  .offcanvas-lg {
-    position: static;
-    transform: none;
-    visibility: visible !important;
-    display: block !important;
-    background: transparent;
-    border: none;
-    height: auto;
-  }
-
-  .offcanvas-lg .offcanvas-body {
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 1rem;
-  }
-
-  .offcanvas-lg .navbar-nav {
-    display: flex;
-    gap: 1.5rem;
-  }
-}
-
-/* Ensure offcanvas close button is visually hidden on large screens */
-.offcanvas-header.d-lg-none {
-  display: none;
 }
 
 /* ============================================================
@@ -1194,13 +1045,6 @@ a {
   background-color: #0a1f44;
 }
 
-.extra-box {
-  background: white;
-  height: 180px;
-  border-radius: 20px;
-  margin-top: 30px;
-}
-
 .footer-center {
   display: flex;
   flex-direction: column;
@@ -1286,16 +1130,7 @@ a {
   max-width: 800px;
 }
 
-/* Responsive utilities */
 @media (max-width: 991.98px) {
-  .hero-right-col {
-    display: none;
-  }
-
-  .hero-section {
-    min-height: auto;
-  }
-
   .features-heading {
     margin-bottom: 2rem;
   }
@@ -1310,18 +1145,6 @@ a {
 }
 
 @media (max-width: 575.98px) {
-  .hero-section {
-    padding-bottom: 260px;
-  }
-
-  .hero-right-bg {
-    height: 220px;
-  }
-
-  .hero-phone-ui {
-    display: none;
-  }
-
   .hero-title {
     font-size: 2.1rem;
   }
