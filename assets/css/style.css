@@ -408,25 +408,26 @@ a { text-decoration: none; }
    6. REVIEWS & FEATURED IN (GOLD WRAPPER)
    ============================================================ */
 .bg-gold-wrapper {
-  background-color: var(--color-gold);
+  background-color: #ffb800;
 }
 
 .reviews-section {
-  padding: 90px 0 36px 0;
+  padding: 100px 0 40px 0;
 }
 
 .reviews-section .section-title {
-  color: var(--color-dark);
-  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
-  font-weight: 900;
-  line-height: 1.15;
+  color: #000033;
+  font-size: clamp(2.4rem, 4.5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 /* Horizontal scroll track */
 .reviews-scroll-track {
   overflow-x: auto;
   overflow-y: visible;
-  padding-bottom: 10px;
+  padding-bottom: 40px;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -434,9 +435,9 @@ a { text-decoration: none; }
 
 .reviews-scroll {
   display: flex;
-  gap: 24px;
-  padding: 0 calc((100vw - 1140px) / 2);  /* align with container */
-  padding-right: 60px; /* allow partial card to peek */
+  gap: 30px;
+  padding: 0 calc((100vw - 1140px) / 2);
+  padding-right: 60px;
 }
 
 @media (max-width: 1199.98px) {
@@ -445,34 +446,39 @@ a { text-decoration: none; }
 
 .review-card {
   background: #fff;
-  border-radius: var(--radius-xl);
-  padding: 2rem 2rem 1.8rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  min-width: 340px;
-  max-width: 380px;
+  border-radius: 40px;
+  padding: 45px 40px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+  min-width: 360px;
+  max-width: 420px;
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
 }
 
-.stars { color: var(--color-gold); font-size: 1.1rem; margin-bottom: 1rem; }
+.stars { 
+  color: #ffb800; 
+  font-size: 1.3rem; 
+  margin-bottom: 25px; 
+}
 
 .review-text {
-  color: var(--color-dark);
-  font-size: 0.95rem;
-  font-weight: 500;
-  line-height: 1.65;
-  margin-bottom: 1.5rem;
+  color: #000033;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 30px;
 }
 
 .reviewer-name {
   font-weight: 800;
-  font-size: 0.95rem;
-  color: var(--color-dark);
-  display: block;
+  font-size: 1.1rem;
+  color: #000033;
+  margin-top: auto;
 }
 
 .featured-section {
-  padding: 32px 0 64px 0;
-  margin-top: 28px;
+  padding: 40px 0 100px 0;
 }
 
 .featured-logos-bar {
@@ -481,8 +487,8 @@ a { text-decoration: none; }
 
 .featured-label {
   font-weight: 800;
-  font-size: 1.1rem;
-  color: var(--color-dark);
+  font-size: 1.4rem;
+  color: #000033;
   font-family: var(--font-heading);
   white-space: nowrap;
 }
