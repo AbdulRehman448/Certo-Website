@@ -417,17 +417,24 @@ a {
 .hero-visual-frame {
   flex: 1;
   position: relative;
-  /* Thick blue border on 3 sides to push against the right edge */
-  border: 22px solid #3d39ff;
-  border-right: none; 
+  
+  border-top: 15px solid #4338ca;    /* Keeps top line */
+  border-left: 15px solid #4338ca;   /* Keeps left line */
+  border-bottom: none;               /* Explicitly removes bottom line */
+  border-right: none;                /* Explicitly removes right line */
+  
   height: 85vh;
   display: flex;
   align-items: stretch;
+  
+  /* Ensures the container sits flush at the bottom */
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .orange-tint-wrapper {
   position: relative;
-  background-color: #f97316; /* Base orange color */
+  background-color: hsl(50, 80%, 51%); /* Base orange color */
   line-height: 0;
   width: 100%;
 }
