@@ -385,6 +385,7 @@ a {
   .certo-navbar {
     background-color: #F4F7FC;
     padding: 12px 15px;
+    position: static;
   }
   
   .certo-logo {
@@ -397,41 +398,129 @@ a {
   
   .navbar-toggler {
     padding: 0.15rem 0.3rem;
+    position: relative;
+    z-index: 1051;
+    border: none;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
   }
   
   .navbar-toggler-icon {
     width: 1.3rem;
     height: 1.3rem;
   }
+
+  /* Slide-in sidebar from left to right on mobile */
+  .navbar-collapse {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 280px;
+    height: 100vh;
+    background-color: #F4F7FC !important;
+    background: #F4F7FC !important;
+    z-index: 1050;
+    padding: 30px 20px;
+    border-right: 2px solid #E2E8F4;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    flex-direction: column !important;
+    display: flex !important;
+  }
+
+  .navbar-collapse.show {
+    transform: translateX(0);
+    background-color: #F4F7FC !important;
+    background: #F4F7FC !important;
+  }
+
+  /* Overlay backdrop when navbar is open */
+  .navbar-collapse.show::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 280px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
   
   .collapse.show {
-    margin-top: 15px;
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-top: 0;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
   }
   
   .navbar-nav {
+    flex-direction: column !important;
     gap: 0 !important;
+    margin-bottom: 20px;
   }
   
   .certo-navbar .nav-link {
-    padding: 10px 0;
-    font-size: 0.9rem;
+    padding: 14px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    border: none;
     border-bottom: 1px solid #E2E8F4;
+    transition: color 0.2s ease;
+  }
+
+  .certo-navbar .nav-link:hover {
+    color: var(--color-blue);
   }
   
   .certo-navbar .nav-link:last-child {
     border-bottom: none;
   }
+
+  .certo-navbar .dropdown-toggle {
+    font-weight: 600;
+  }
+
+  .certo-navbar .dropdown-menu {
+    background-color: #fff;
+    border: none;
+    box-shadow: none;
+    padding: 8px 0;
+    margin-top: 8px;
+    border-radius: 8px;
+  }
+
+  .certo-navbar .dropdown-item {
+    padding: 10px 0 10px 20px;
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+  }
   
   .btn-sign-in {
-    margin-left: 0 !important;
-    margin-top: 10px;
+    background-color: var(--color-blue);
+    color: #fff;
+    border-radius: 50px;
+    font-weight: 800;
+    padding: 12px 24px;
+    font-size: 1rem;
+    margin: 0 !important;
+    margin-top: 20px !important;
     width: 100%;
-    padding: 0.6rem 1.5rem;
-    font-size: 0.9rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+  }
+
+  .btn-sign-in:hover {
+    background-color: var(--color-blue-dark);
+    color: #fff;
   }
 }
 
