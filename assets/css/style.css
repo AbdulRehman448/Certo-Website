@@ -329,56 +329,56 @@ a {
    5. HERO SECTION
    ============================================================ */
 .hero-container {
-  display: flex;
+  display: block;
   align-items: center;
   background: linear-gradient(135deg, #f0f6ff 0%, #ffffff 100%);
   min-height: 85vh;
-  padding-left: 10%;
-  /* Creates the left-side breathing room for text */
+  padding: 60px 0;
   overflow: hidden;
   position: relative;
 }
 
 /* Text Section */
 .hero-content {
-  flex: 0 0 45%;
   padding-right: 40px;
   z-index: 5;
 }
 
 .hero-title {
   font-family: var(--font-heading);
-  font-size: 4.2rem;
+  font-size: 2.6rem;
   font-weight: 800;
   color: #0d084d;
   line-height: 1.05;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
   letter-spacing: -0.02em;
 }
 
 .hero-subtitle {
   font-family: var(--font-body);
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: #475569;
   line-height: 1.6;
-  margin-bottom: 45px;
-  max-width: 540px;
+  margin-bottom: 30px;
+  max-width: 600px;
 }
 
 /* Button Group */
 .hero-cta-group {
   display: flex;
-  gap: 25px;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .btn-pill {
-  padding: 18px 40px;
+  padding: 12px 28px;
   border-radius: 50px;
   font-weight: 700;
   text-decoration: none;
-  font-size: 1.15rem;
+  font-size: 1rem;
   transition: all 0.3s ease;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 12px;
 }
@@ -458,12 +458,11 @@ a {
 .phone-mockup {
   position: absolute;
   top: 50%;
-  left: 12%;
-  /* Overlapping the border */
+  left: 10%;
   transform: translateY(-50%);
-  width: 32%;
+  width: 36%;
   z-index: 10;
-  filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.45));
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.35));
   animation: floating 4s ease-in-out infinite;
 }
 
