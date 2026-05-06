@@ -434,7 +434,7 @@ a {
 
 .orange-tint-wrapper {
   position: relative;
-  background-color: hsl(50, 80%, 51%); /* Base orange color */
+  background-color: hsl((255, 179, 62)); /* Base orange color */
   line-height: 0;
   width: 100%;
 }
