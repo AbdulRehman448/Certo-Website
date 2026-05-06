@@ -970,6 +970,69 @@ a { text-decoration: none; }
   margin-top: 30px;
 }
 
+.footer-center {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* THE BUTTON PILL: Expert Implementation */
+.btn-insights-pill {
+    /* Layout & Alignment */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Perfect spacing between text and arrow */
+    
+    /* Colors (Matching image_9.png) */
+    background-color: #ffb800; /* Rich gold/yellow */
+    color: #000033;            /* Deep navy */
+    
+    /* Sizing & Border-Radius */
+    padding: 16px 35px;        /* Wide padding for that flat aesthetic */
+    border-radius: 50px;       /* Pill shape */
+    
+    /* Typography */
+    font-weight: 700;          /* Bold weight */
+    font-size: 1.1rem;
+    text-decoration: none;     /* Removes link underline */
+    
+    /* Technical Detail: Smooth transitions for hover */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    
+    /* Ensures this doesn't conflict with legacy footer link styling */
+    margin-top: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Arrow specific styling for control */
+.btn-arrow {
+    font-size: 1.3rem; /* Slightly larger for emphasis */
+    line-height: 1;    /* Ensures perfect centering on the line */
+    transition: transform 0.3s ease;
+}
+
+/* PROFESSIONAL INTERACTIONS */
+
+/* Hover State: Subtle color shift and interaction */
+.btn-insights-pill:hover {
+    background-color: #ffc107; /* A slightly brighter gold */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Modern, soft shadow */
+    color: #000033;
+}
+
+/* Moving the arrow on hover (micro-interaction) */
+.btn-insights-pill:hover .btn-arrow {
+    transform: translateX(6px); /* Moves arrow slightly right */
+}
+
+/* Active/Click State: Slight compression for feedback */
+.btn-insights-pill:active {
+    transform: translateY(1px); /* Compresses down slightly */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 /* Bottom Disclaimer */
 .footer-disclaimer {
   margin-top: 80px;
