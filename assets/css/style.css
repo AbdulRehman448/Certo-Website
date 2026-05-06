@@ -333,7 +333,8 @@ a {
   align-items: center;
   background: linear-gradient(135deg, #f0f6ff 0%, #ffffff 100%);
   min-height: 85vh;
-  padding-left: 10%; /* Creates the left-side breathing room for text */
+  padding-left: 10%;
+  /* Creates the left-side breathing room for text */
   overflow: hidden;
   position: relative;
 }
@@ -417,16 +418,20 @@ a {
 .hero-visual-frame {
   flex: 1;
   position: relative;
-  
-  border-top: 15px solid #4338ca;    /* Keeps top line */
-  border-left: 15px solid #4338ca;   /* Keeps left line */
-  border-bottom: none;               /* Explicitly removes bottom line */
-  border-right: none;                /* Explicitly removes right line */
-  
+
+  border-top: 15px solid #4338ca;
+  /* Keeps top line */
+  border-left: 15px solid #4338ca;
+  /* Keeps left line */
+  border-bottom: none;
+  /* Explicitly removes bottom line */
+  border-right: none;
+  /* Explicitly removes right line */
+
   height: 85vh;
   display: flex;
   align-items: stretch;
-  
+
   /* Ensures the container sits flush at the bottom */
   margin-bottom: 0;
   padding-bottom: 0;
@@ -434,7 +439,8 @@ a {
 
 .orange-tint-wrapper {
   position: relative;
-  background-color: hsl((255, 179, 62)); /* Base orange color */
+  background-color: hsl((255, 179, 62));
+  /* Base orange color */
   line-height: 0;
   width: 100%;
 }
@@ -444,7 +450,7 @@ a {
   height: 100%;
   object-fit: cover;
   /* This creates the monochromatic effect */
-  mix-blend-mode: multiply; 
+  mix-blend-mode: multiply;
   opacity: 0.9;
 }
 
@@ -452,7 +458,8 @@ a {
 .phone-mockup {
   position: absolute;
   top: 50%;
-  left: 12%; /* Overlapping the border */
+  left: 12%;
+  /* Overlapping the border */
   transform: translateY(-50%);
   width: 32%;
   z-index: 10;
@@ -467,9 +474,17 @@ a {
 }
 
 @keyframes floating {
-  0% { transform: translateY(-50%) translateX(0px); }
-  50% { transform: translateY(-54%) translateX(0px); }
-  100% { transform: translateY(-50%) translateX(0px); }
+  0% {
+    transform: translateY(-50%) translateX(0px);
+  }
+
+  50% {
+    transform: translateY(-54%) translateX(0px);
+  }
+
+  100% {
+    transform: translateY(-50%) translateX(0px);
+  }
 }
 
 /* Mobile Responsiveness */
@@ -480,20 +495,24 @@ a {
     text-align: center;
     min-height: auto;
   }
+
   .hero-content {
     flex: 1;
     padding-right: 0;
     margin-bottom: 50px;
     max-width: 100%;
   }
+
   .hero-cta-group {
     justify-content: center;
   }
+
   .hero-visual-frame {
     border-right: 15px solid #4338ca;
     width: 100%;
     aspect-ratio: 16 / 10;
   }
+
   .hero-title {
     font-size: 2.8rem;
   }
