@@ -14,6 +14,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Sora:wght@400;600;700;800&display=swap"
     rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -467,73 +469,61 @@
       FOOTER START
     ============================================================ -->
     <footer class="site-footer">
-    <div class="container footer-content-wrap">
-      <div class="row g-5">
-
-        <!-- Left Column: Branding & Socials -->
-        <div class="col-lg-4">
-          <h2 class="footer-title-large">Scan. Detect. Remove.</h2>
-          <div class="d-flex gap-3 mt-4 mb-5">
-            <a href="#" class="social-box"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="social-box"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="social-box"><i class="bi bi-youtube"></i></a>
+      <div class="footer-wrap">
+        <!-- Left Column -->
+        <div class="footer-left">
+          <h2 class="brand-statement">Scan. Detect. Remove.</h2>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
           </div>
-          <div class="footer-bottom-links mb-4">
+          <div class="footer-legal">
             <a href="#">Privacy Policy</a>
-            <a href="#" class="ms-4">Terms of Service</a>
+            <a href="#">Terms of Service</a>
           </div>
-          <p class="footer-info-text mb-1">
-            Copyright © 2022 Certo Software Limited | Registered in England & Wales No. 10072356
+          <p class="copyright-text">
+            Copyright © <span id="year"></span> Certo Software Limited | Registered in England & Wales No. 10072356
           </p>
-          <p class="footer-info-text">
-            Designed & developed by <a href="#" class="text-white text-decoration-underline">Bigger Picture</a>
-          </p>
+          <p class="credits">Designed & developed by <a href="#">Bigger Picture</a></p>
         </div>
 
-        <!-- Middle Column: Links -->
-        <div class="col-lg-3 offset-lg-1">
-          <div class="footer-nav-col">
-            <h3 class="footer-nav-title">Certo</h3>
-            <div class="footer-nav-divider"></div>
-            <ul class="footer-nav-list">
-              <li><a href="#">— iPhone</a></li>
-              <li><a href="#">— Android</a></li>
-              <li><a href="#">— Help</a></li>
-              <li><a href="#">— About</a></li>
-              <li><a href="#">— Insights</a></li>
-            </ul>
-          </div>
+        <!-- Center Column -->
+        <div class="footer-center">
+          <h2 class="footer-title">Certo</h2>
+          <ul class="nav-links">
+            <li><a href="#">iPhone</a></li>
+            <li><a href="#">Android</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Insights</a></li>
+          </ul>
         </div>
 
-        <!-- Right Column: Newsletter & White Box -->
-        <div class="col-lg-4">
-          <div class="newsletter-gold-box mb-4">
-            <img src="assets/images/logo.png" alt="" class="newsletter-watermark">
-            <h3 class="newsletter-title">Sign up to our newsletter</h3>
-            <p class="newsletter-text">
-              Receive the latest mobile security news, exclusive discounts & offers straight to your inbox!
-            </p>
-            <div class="newsletter-form-pill">
-              <input type="email" placeholder="Email address" aria-label="Email address">
+        <!-- Right Column -->
+        <div class="footer-right">
+          <div class="newsletter-box">
+            <h3>Sign up to our newsletter</h3>
+            <p>Receive the latest mobile security news, exclusive discounts & offers straight to your inbox!</p>
+            <div class="input-group">
+              <input type="email" placeholder="Email address">
               <button type="submit">Submit</button>
             </div>
           </div>
-          <div class="footer-white-box"></div>
+          <div class="extra-box"></div>
         </div>
-
       </div>
 
-      <!-- Final Disclaimer -->
-      <div class="mt-5 pt-4">
-        <p class="footer-disclaimer">
-          Apple, the Apple logo, and iPhone are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc. Android, Google Play and the Google Play logo are trademarks of Google LLC.
-        </p>
+      <div class="footer-disclaimer">
+        Apple, the Apple logo, and iPhone are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc. Android, Google Play and the Google Play logo are trademarks of Google LLC.
       </div>
-    </div>
-  </footer>
-  <!-- FOOTER END -->
+    </footer>
+    <!-- FOOTER END -->
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
