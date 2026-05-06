@@ -865,61 +865,102 @@ a { text-decoration: none; }
 
 /* Newsletter Box */
 .newsletter-box {
-  background-color: #ffb800; /* Primary gold/yellow */
-  color: #000033;
-  padding: 40px;
-  border-radius: 40px;
-  max-width: 450px;
-  position: relative;
-  overflow: hidden; /* Ensures the watermark doesn't spill out */
-
-  /* Watermark Logic */
-  background-image: url('../images/logo.png'); /* Using logo.png as the watermark */
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 80%; /* Adjust size to match the image */
-  
-  /* This creates the subtle 'ghost' effect */
-  background-blend-mode: soft-light; 
-  opacity: 1; 
+    background-color: #ffb800; /* Uses the yellow from the second image */
+    color: #000033;            /* Deep navy for text */
+    padding: 40px;
+    border-radius: 40px;
+    max-width: 450px;
+    
+    /* Technical detail: ensures watermark doesn't break the layout */
+    position: relative; 
+    overflow: hidden; 
 }
 
+/* Watermark using pseudo-element for maximum control */
+.newsletter-box::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background-image: url('../images/logo.png'); /* Logo watermark */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.15; /* Subtle ghost effect */
+    z-index: 0;
+}
+
+/* Ensure content sits above the watermark */
+.newsletter-box > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Typography matching design */
 .newsletter-box h3 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    font-family: var(--font-heading);
 }
 
-.input-group {
-  display: flex;
-  background: white;
-  padding: 5px;
-  border-radius: 50px; /* Pill shape */
-  margin-top: 25px;
+.newsletter-box p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    opacity: 0.9;
 }
 
-.input-group input {
-  border: none;
-  background: none;
-  padding: 10px 20px;
-  flex: 1;
-  outline: none;
-  font-size: 1rem;
+/* The unified input group */
+.newsletter-input-group {
+    display: flex;
+    background-color: #ffffff; /* White background for the entire 'pill' */
+    border-radius: 50px;       /* Perfect pill shape */
+    padding: 4px;             /* Slight padding creates the border effect */
+    margin-top: 25px;
+    overflow: hidden;          /* Keeps elements contained */
 }
 
-.input-group button {
-  background: #000033;
-  color: white;
-  border: none;
-  padding: 12px 30px;
-  border-radius: 40px;
-  font-weight: 800;
-  cursor: pointer;
-  transition: opacity 0.2s;
+/* Styling the actual text input */
+.newsletter-input-group input {
+    flex: 1;                  /* Takes up remaining space */
+    border: none;             /* NO border on the input itself */
+    background: transparent; /* Inherits white from the parent */
+    padding: 12px 20px;
+    font-size: 1rem;
+    color: #000033;
+    outline: none;            /* Removes default focus blue ring */
 }
 
-.input-group button:hover {
-  opacity: 0.9;
+/* Placeholder color */
+.newsletter-input-group input::placeholder {
+    color: #64748b;
+}
+
+/* Styling the Submit Button to sit perfectly on the right */
+.newsletter-input-group .btn-submit {
+    background-color: #000033; /* Deep navy button color */
+    color: #ffffff;
+    border: none;
+    padding: 0 35px;          /* Width matching design */
+    border-radius: 40px;       /* Inner pill rounding */
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    
+    /* Ensure text is centered within the button space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover state for usability */
+.newsletter-input-group .btn-submit:hover {
+    background-color: #0a1f44;
 }
 
 .extra-box {
@@ -973,19 +1014,21 @@ a { text-decoration: none; }
     border-radius: 30px;
   }
 
-  .input-group {
+  .newsletter-input-group {
     flex-direction: column;
-    padding: 10px;
+    padding: 5px;
     border-radius: 20px;
   }
 
-  .input-group input {
-    padding: 10px;
+  .newsletter-input-group input {
+    padding: 15px;
     text-align: center;
   }
 
-  .input-group button {
+  .newsletter-input-group .btn-submit {
     width: 100%;
+    border-radius: 15px;
+    padding: 12px;
   }
 
   .footer-wrap {
