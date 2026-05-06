@@ -865,11 +865,23 @@ a { text-decoration: none; }
 
 /* Newsletter Box */
 .newsletter-box {
-  background-color: #ffb800;
+  background-color: #ffb800; /* Primary gold/yellow */
   color: #000033;
   padding: 40px;
   border-radius: 40px;
   max-width: 450px;
+  position: relative;
+  overflow: hidden; /* Ensures the watermark doesn't spill out */
+
+  /* Watermark Logic */
+  background-image: url('../images/logo.png'); /* Using logo.png as the watermark */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%; /* Adjust size to match the image */
+  
+  /* This creates the subtle 'ghost' effect */
+  background-blend-mode: soft-light; 
+  opacity: 1; 
 }
 
 .newsletter-box h3 {
