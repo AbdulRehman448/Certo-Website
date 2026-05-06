@@ -562,6 +562,41 @@ a {
   }
 }
 
+/* Offcanvas (left slide) navbar tweaks */
+.offcanvas {
+  --bs-offcanvas-width: 300px;
+}
+
+@media (min-width: 992px) {
+  .offcanvas-lg {
+    position: static;
+    transform: none;
+    visibility: visible !important;
+    display: block !important;
+    background: transparent;
+    border: none;
+    height: auto;
+  }
+
+  .offcanvas-lg .offcanvas-body {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+
+  .offcanvas-lg .navbar-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+}
+
+/* Ensure offcanvas close button is visually hidden on large screens */
+.offcanvas-header.d-lg-none {
+  display: none;
+}
+
 /* ============================================================
    6. REVIEWS & FEATURED IN (GOLD WRAPPER)
    ============================================================ */
